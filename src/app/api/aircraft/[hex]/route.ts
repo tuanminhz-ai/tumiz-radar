@@ -11,12 +11,17 @@ export async function GET(
     return NextResponse.json({ error: 'Mã ICAO24 (hex) không hợp lệ' }, { status: 400 });
   }
 
+  const { searchParams } = new URL(request.url);
+  const reg = searchParams.get('reg');
+
   try {
     // Lấy ảnh từ Planespotters và thông tin chuyến bay nếu có
-    const [photo, flight] = await Promise.all([
-      getAircraftPhoto(hex),
-      fetchLiveFlightByHex(hex),
-    ]);
+    let photo = await getAircraftPhoto(hex);
+    if (!photo && reg) {
+      photo = await getAircraftPhoto(reg);
+    }
+
+    const flight = await fetchLiveFlightByHex(hex);
 
     return NextResponse.json({
       success: true,

@@ -47,7 +47,8 @@ export function FlightDetailPanel({
     let isMounted = true;
     setPhotoLoading(true);
 
-    fetch(`/api/aircraft/${flight.hex}`)
+    const regParam = flight.registration ? `?reg=${encodeURIComponent(flight.registration)}` : '';
+    fetch(`/api/aircraft/${flight.hex}${regParam}`)
       .then((res) => res.json())
       .then((data) => {
         if (isMounted) {

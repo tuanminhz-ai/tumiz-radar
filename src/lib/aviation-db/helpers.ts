@@ -106,7 +106,11 @@ export const COMMON_FLIGHT_ROUTES: Record<string, { origin: string; dest: string
   HVN1823: { origin: 'HAN', dest: 'PQC' },
   VJC322: { origin: 'SGN', dest: 'PQC' },
 
-  // Quốc tế đến Việt Nam
+  // Quốc tế đến và đi từ Việt Nam
+  HVN83: { origin: 'HAN', dest: 'AMS' },
+  HVN083: { origin: 'HAN', dest: 'AMS' },
+  HVN84: { origin: 'AMS', dest: 'HAN' },
+  HVN084: { origin: 'AMS', dest: 'HAN' },
   SIA66: { origin: 'SIN', dest: 'SGN' },
   SIA176: { origin: 'SIN', dest: 'HAN' },
   THA560: { origin: 'BKK', dest: 'HAN' },

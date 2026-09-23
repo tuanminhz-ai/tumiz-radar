@@ -25,6 +25,24 @@ interface DemoFlightTemplate {
 
 const DEMO_TEMPLATES: DemoFlightTemplate[] = [
   {
+    hex: '888083',
+    callsign: 'HVN83',
+    flightNumber: 'VN 83',
+    registration: 'VN-A868',
+    typeCode: 'B789',
+    originIata: 'HAN',
+    destIata: 'AMS',
+    startLat: 21.2212,
+    startLon: 105.8072,
+    endLat: 52.3105,
+    endLon: 4.7683,
+    baseAltitude: 39000,
+    baseSpeed: 495,
+    squawk: '0833',
+    progressOffset: 0.32,
+    speedFactor: 0.00004,
+  },
+  {
     hex: '888123',
     callsign: 'HVN213',
     flightNumber: 'VN 213',

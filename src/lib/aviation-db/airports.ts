@@ -384,6 +384,16 @@ export const AIRPORTS: Record<string, AirportInfo> = {
     lon: -0.4543,
     timezone: 'Europe/London',
   },
+  AMS: {
+    iata: 'AMS',
+    icao: 'EHAM',
+    name: 'Sân bay Quốc tế Amsterdam Schiphol',
+    city: 'Amsterdam',
+    country: 'Hà Lan',
+    lat: 52.3105,
+    lon: 4.7683,
+    timezone: 'Europe/Amsterdam',
+  },
   SYD: {
     iata: 'SYD',
     icao: 'YSSY',
